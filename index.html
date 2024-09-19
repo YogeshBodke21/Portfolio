@@ -1,0 +1,254 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="static/style.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <style>
+        #toastBox{
+            position: absolute;
+            bottom: 30px;
+            right:10px;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 20px;
+          }
+          .toast{
+            width: 400px;
+            height: 80px;
+            background: #ffff;
+            font-weight: 500;
+            margin: 15px 0;
+            box-shadow: 0 0  20px rgba(0,0,0, 0.3) ;
+            display: flex;
+            align-items: center;
+            position: relative;
+          
+          }
+          .toast i{
+            margin : 0 20px;
+            font-size :35px;
+            color: green;
+          }
+          .toast::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 5px;
+            background:green;
+            animation: anim 5s linear forwards;
+          }
+          @keyframes anim{
+            100%{
+                width:0;
+            }
+          }
+          @media (max-width:550px) {
+            .toast{
+                width: 300px;
+                height: 70px;
+                bottom: 30px;
+            }
+        }
+        #btnsubmit{
+            margin-left:1vw;
+        }
+    </style>
+  </head>
+  <body>
+    <nav>
+        <div class="logo">
+            <h1><i id="lg" class="fa-solid fa-user-tie"></i>Portfolio</h1>
+        </div>
+        <ul id="menuList">
+            <li><a class="ho" href="#">Home</a></li>
+            <li><a class="ho" href="#skill">Skills</a></li>
+            <li><a class="ho" href="#Education">Eduction</a></li>
+            <li><a class="ho" href="#projects">Projects</a></li>
+        </ul>
+        <div class="menu-icon "><i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+    <!-- Home Section -->
+    <section id="home" class="">
+        <div class="home-main">
+            <div class="image-up">
+                <div class="circle flex s-center items-center" id="img-top">
+                    <img id="mainImage" src="Images/yogeshbodke.jpg"  alt="">
+                </div>
+            </div>
+            <div class="home-content">
+                <h6 class="hi1">Hi, I'm</h6>
+                <h1 class="name">Yogesh Bodke</h1>
+                <h4 class="hi1">Software Engineer</h4>
+                <p class="text-me">I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results.
+                     With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.</p>
+                <a href="https://drive.google.com/file/d/1-4zVtB93ya2J6pim6G8La7C3e_L4eGAm/view?usp=drivesdk"  target="_blank">
+                    <button class="button button1">Resume</button></a>
+                    
+                <a class="button button1" id="hireme" href="https://github.com/YogeshBodke21?tab=repositories"
+                    target="_blank">Github</a>
+            </div>
+        </div>
+    </section>
+    <section class="skil" id="skill">
+        <h1 class="hero-head">Skills</h1>
+            <div class="skills">
+                <div class="inner-skill">
+                    <h1 class="heading">Frontend</h1>
+                    <div class="skill">
+                        <p class="sk">HTML</p>
+                        <p class="sk">CSS</p>
+                        <p class="sk">Javascript</p>
+                        <p class="sk">JQuery</p>
+                        <p class="sk">Bootstrap</p>
+                        
+                    </div>
+                </div>
+                <div class="inner-skill">
+                    <h1 class="heading">Backend</h1>
+                    <div class="skill">
+                        <p class="sk">Python</p>
+                        <p class="sk">Django</p>
+                        <p class="sk">ORM</p>
+                        <p class="sk">Celery</p>
+                        <p class="sk">Django Rest Framework</p>
+                        <p class="sk">REST APIs</p>
+                        <p class="sk">MySQL</p>
+                
+                    </div>
+                </div>
+                <div class="inner-skill">
+                    <h1 class="heading">Libraries & Tools</h1>
+                    <div class="skill">
+                        <p class="sk">NumPy</p>
+                        <p class="sk">Pandas</p>
+                        <p class="sk">Matplotlib</p>
+                        <p class="sk">Docker</p>
+                        <p class="sk">Git & Github</p>
+                        <p class="sk">Postman </p>
+                        <p class="sk">VS Code </p>
+                        <p class="sk">PyCharm </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="Education" class="tion">
+         <h1 class="hero-head skil">Education</h1>
+        <div class="edu">
+            <div class="inner-edu">
+                <p class="clg-name">Full Stack Python Course</p>
+                <p class="degree">Institute : Adhyayan IT Training & Placement, Karvenagar, PUNE</p>
+                <p class="degree">Duration  : 6 Months</p>
+                
+            </div>
+            <div class="inner-edu">
+                <p class="clg-name">B.E.(Mechanical)</p>
+                <p class="degree">College: TSSM's BSCOER, NARHE, PUNE- 41</p>
+                <p class="degree">Year : 2018 - 2022</p>
+                <p class="degree">CGPA : 9.69</p>
+            </div>
+            <div class="inner-edu">
+                <p class="clg-name">HSC</p>
+                <p class="degree">College: Y.M.College, Kothrud, PUNE- 38</p>
+                <p class="degree">Year : 2018 </p>
+                <p class="degree">Percentage : 79.37%</p>
+            </div>
+            <div class="inner-edu">
+                <p class="clg-name">SSC</p>
+                <p class="degree">School: SAW School, Ambavane, Mulshi, Pune</p>
+                <p class="degree">Year : 2016</p>
+                <p class="degree">Percentage : 89.80%</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h1 class="hero-head skil">Projects</h1>
+        <div class="projects-container">
+            <div class="projects-item">
+                <h1>ShopinglY E-commerce Website</h1>
+                <p>
+                    <p>Technology Used: Django, MVT, MySQL, jQuery, Bootstrap</p>
+                    <p>This project based is on an ideology of providing E-Platform to daily products.</p>
+                    <p>Use of Django's Authentication System</p>
+                </p>
+                <div class="link-b">
+                    <!-- <a href="#" target="_blank" class="button2 button1">Link</a> -->
+                    <a href="#" target="_blank" class="button2 button1">Github Link</a>
+                </div>
+            </div>
+            <div class="projects-item">
+                <h1>Notes making REST API</h1>
+                <p>
+                    <p>Technology Used: Django REST Framework, MySQL, JWT Authentication, Axios, Basics of React JS</p>  
+                    <p>Authenticated User can only add and delete the Notes.</p>
+                </p>
+                <div class="link-b">
+                    <!-- <a href="#" target="_blank" class="button2 button1">Link</a> -->
+                    <a href="https://github.com/YogeshBodke21/DRF-with-React—Notes-API" target="_blank" class="button2 button1"> Github Link</a>
+                </div>
+            </div>
+            <div class="projects-item">
+                <h1> My Portfolio</h1>
+                <p>This is My portfolio website which is created with HTML,CSS and Javascript which describe my skill and knowledge.My portfolio website showcases my work in a sleek and minimalist design, allowing the focus to be on the content itself. The layout is uncluttered, making it easy for visitors to navigate and explore my projects.</p>
+        </p>
+                <div class="link-b">
+                    <!-- <a href="#" target="_blank" class="button2 button1">Link</a> -->
+                    <a href="#" target="_blank" class="button2 button1"> Github Link</a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+  <div id="toastBox"></div>
+    <br><br>
+    <footer id="footer">
+        <ul class="go-up">
+            <li><a href="#home" class="foot">Home</a></li>
+            <li><a href="#skill" class="foot">Skills</a></li>
+            <li><a href="#projects" class="foot">Projects</a></li>
+            
+        </ul>
+        <ul class="brands">
+            <a href="https://www.linkedin.com/in/yogesh-bodke-yb" target="_blank">
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+            </a>
+            <a href="https://github.com/YogeshBodke21" target="_blank">
+                <li><i class="fa-brands fa-github"></i></li>
+            </a>
+            <a href="#" target="#">
+                <li><i class="fa-brands fa-instagram"></i></li>
+            </a>
+            
+        </ul>
+            <p class="last-f"> &copy; All Rights Reserved - <span class="">Yogesh Bodke
+                </span></p>
+      
+    </footer >
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+    
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+            }
+        };
+    </script>
+</body>
+    
+</html>
